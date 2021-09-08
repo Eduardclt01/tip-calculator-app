@@ -1,0 +1,10 @@
+.card-input-section{
+  flex-grow: 1;
+}
+.card-input-section__input-container{
+  margin-bottom: 1rem;
+}
+
+.card-input-section__input-container__label{
+  display: block;
+}
