@@ -1,6 +1,6 @@
-import './../css/card-display-section.css'
+import '../css/card-display-section.css'
 
-function CardDisplaySection() {
+function CardDisplaySection(props) {
   return (
     <div className="card-display-section">
 
@@ -11,7 +11,7 @@ function CardDisplaySection() {
         </div>
 
         <div className="card-display-section__container--amount">
-          <p>R0</p>
+          <p>R{props.calculatedTipAmount}</p>
         </div>
       </div>
 
@@ -22,7 +22,7 @@ function CardDisplaySection() {
         </div>
 
         <div className="card-display-section__container--amount">
-          <p>R0</p>
+          <p>R{props.calculatedTotalAmount}</p>
         </div>
       </div>
 
