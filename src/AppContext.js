@@ -13,14 +13,13 @@ export const AppContextWrapper = (props) => {
   });
 
   function setBillAmount(amount) {
+    console.log('Appcontext.js Amount: ' + amount)
     setState(function(state) {
       return {
         ...state,
         billAmount: amount
       };
     });
-    console.log('Appcontext.js Amount: ' + amount)
-    console.log('Appcontext.js State Amount: ' + state.billAmount)
   }
 
   function setNumberOfPeople(amount) {

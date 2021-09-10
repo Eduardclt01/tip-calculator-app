@@ -9,10 +9,10 @@ function CardInputSection() {
   const appContext = React.useContext(AppContext);
 
   // ----- Event Listeners -----
+  console.log('CardInput.js State Amount: ' + appContext.state.billAmount)
 
   function onBillAmountChange(event){
     appContext.actions.setBillAmount(parseInt(event.target.value));
-    console.log('CardInput.js State Amount: ' + appContext.state.billAmount)
     console.log('--')
     console.log('--')
     // calculateTotals();
@@ -55,6 +55,7 @@ function CardInputSection() {
 
       <div className="card-input-section__input-container">
         <label className="card-input-section__input-container__label">Tip percentage</label>
+        {/* TODO: radio buttons */}
         <button onClick={onTipPercentageClick} data-percentage="5">5%</button>
         <button onClick={onTipPercentageClick} data-percentage="10">10%</button>
         <button onClick={onTipPercentageClick} data-percentage="15">15%</button>

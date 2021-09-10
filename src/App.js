@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppContext } from "./AppContext.js";
-import Card from './components/Card.js'
+import Card from './components/card/Card.js'
 import CardInputSection from './components/CardInputSection.js'
 import CardDisplaySection from './components/CardDisplaySection.js'
 
