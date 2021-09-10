@@ -1,4 +1,4 @@
-.card-display-section{
+.calculator-output{
   background-color: #735290;
   border-radius: 1rem;
   padding: 1rem;
@@ -6,7 +6,7 @@
   color: white
 }
 
-.card-display-section__container{
+.calculator-output__container{
   display: flex;
   justify-content: space-between;
 }

@@ -1,8 +1,8 @@
 import React from 'react';
 import { AppContext } from "./AppContext.js";
-import Card from './components/card/Card.js'
-import CardInputSection from './components/CardInputSection.js'
-import CardDisplaySection from './components/CardDisplaySection.js'
+import Calculator from './components/calculator/Calculator.js'
+import CalculatorInput from './components/calculatorInput/CalculatorInput.js'
+import CalculatorOutput from './components/calculatorOutput/CalculatorOutput.js'
 
 import './css/App.css'
 
@@ -13,12 +13,12 @@ function App() {
     <div className="App">
     <pre>{JSON.stringify(appContext.state, null, 2)}</pre>
 
-      <Card>
-        <CardInputSection></CardInputSection>
-        <CardDisplaySection calculatedTotalAmount={appContext.state.calculatedTotalAmount}
+      <Calculator>
+        <CalculatorInput></CalculatorInput>
+        <CalculatorOutput calculatedTotalAmount={appContext.state.calculatedTotalAmount}
                             calculatedTipAmount={appContext.state.calculatedTipAmount}>
-        </CardDisplaySection>
-      </Card>
+        </CalculatorOutput>
+      </Calculator>
 
     </div>
   );

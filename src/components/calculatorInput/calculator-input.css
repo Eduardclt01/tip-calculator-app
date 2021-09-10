@@ -1,0 +1,10 @@
+.calculator-input{
+  flex-grow: 1;
+}
+.calculator-input__input-container{
+  margin-bottom: 1rem;
+}
+
+.calculator-input__input-container__label{
+  display: block;
+}
