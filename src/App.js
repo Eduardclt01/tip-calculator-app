@@ -16,7 +16,7 @@ function App() {
       <Calculator>
         <CalculatorInput></CalculatorInput>
         <CalculatorOutput calculatedTotalAmount={appContext.state.calculatedTotalAmount}
-                            calculatedTipAmount={appContext.state.calculatedTipAmount}>
+                          calculatedTipAmount={appContext.state.calculatedTipAmount}>
         </CalculatorOutput>
       </Calculator>
 
