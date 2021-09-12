@@ -7,3 +7,9 @@
   -moz-box-shadow: 8px 14px 34px -6px rgba(119, 119, 119, 0.7);
   display: flex;
 }
+
+@media (max-width: 800px) {
+  .calculator {
+    flex-direction: column;
+  }
+}

@@ -8,8 +8,8 @@ export const AppContextWrapper = (props) => {
     billAmount: 0,
     tipPercentage: 0,
     numberOfPeople: 0,
-    calculatedTipAmount: 0,
-    calculatedTotalAmount: 0
+    calculatedTipPerPersonAmount: 0,
+    calculatedTotalTipAmount: 0
   });
 
   function setBillAmount(amount) {
@@ -40,20 +40,33 @@ export const AppContextWrapper = (props) => {
     });
   }
 
-  function setCalculatedTipAmount(amount) {
+  function setCalculatedTipPerPersonAmount(amount) {
     setState(function(state) {
       return {
         ...state,
-        calculatedTipAmount: amount
+        calculatedTipPerPersonAmount: amount
       };
     });
   }
 
-  function setCalculatedTotalAmount(amount) {
+  function setCalculatedTotalTipAmount(amount) {
     setState(function(state) {
       return {
         ...state,
-        calculatedTotalAmount: amount
+        calculatedTotalTipAmount: amount
+      };
+    });
+  }
+
+  function clearCalculatorData(){
+    setState(function(state) {
+      return {
+        ...state,
+        billAmount: 0,
+        tipPercentage: 0,
+        numberOfPeople: 0,
+        calculatedTipPerPersonAmount: 0,
+        calculatedTotalTipAmount: 0
       };
     });
   }
@@ -62,8 +75,9 @@ export const AppContextWrapper = (props) => {
     setBillAmount: setBillAmount,
     setNumberOfPeople: setNumberOfPeople,
     setTipPercentage: setTipPercentage,
-    setCalculatedTotalAmount: setCalculatedTotalAmount,
-    setCalculatedTipAmount: setCalculatedTipAmount
+    setCalculatedTipPerPersonAmount: setCalculatedTipPerPersonAmount,
+    setCalculatedTotalTipAmount: setCalculatedTotalTipAmount,
+    clearCalculatorData: clearCalculatorData
   });
 
   return (

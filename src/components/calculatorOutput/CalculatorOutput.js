@@ -2,6 +2,12 @@ import CalculatorOutputAmount from './CalculatorOutputAmount'
 import './calculator-output.css'
 
 function CalculatorOutput(props) {
+  // ----- Event Listers -----
+
+  function onResetInputsClick() {
+    console.log('Button Clicked: Reset Inputs')
+  }
+
   return (
     <div className="calculator-output">
 
@@ -16,7 +22,7 @@ function CalculatorOutput(props) {
       </CalculatorOutputAmount>
 
       <div className="calculator-output__container">
-        <button>Reset</button>
+        <button onClick={onResetInputsClick} >Reset</button>
       </div>
 
     </div>
