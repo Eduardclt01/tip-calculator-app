@@ -21,12 +21,12 @@ function CalculatorInput() {
   return (
     <div className="calculator-input">
       <div className="calculator-input__input-container">
-        <label className="calculator-input__input-container__label">Bill</label>
-        <input className="" type="number" onChange={onBillTotalChange} aria-label="Toggle" />
+        <label className="calculator-input__input-container--label">Bill</label>
+        <input className="calculator-input__input-container--input-box" placeholder="0" type="number" onChange={onBillTotalChange} aria-label="Toggle" />
       </div>
 
       <div className="calculator-input__input-container">
-        <label className="calculator-input__input-container__label">Tip percentage</label>
+        <label className="calculator-input__input-container--label">Tip percentage</label>
         <div onChange={onTipPercentageChange}>
           <input type="radio" value="5"  name="tipPercentage" /> 5%
           <input type="radio" value="10" name="tipPercentage" /> 10%
@@ -37,8 +37,8 @@ function CalculatorInput() {
       </div>
 
       <div className="calculator-input__input-container">
-        <label className="calculator-input__input-container__label">Number of people</label>
-        <input className="" type="number" onChange={onNumberOfPeopleChange} aria-label="Toggle" />
+        <label className="calculator-input__input-container--label">Number of people</label>
+        <input className="calculator-input__input-container--input-box" placeholder="0" type="number" onChange={onNumberOfPeopleChange} aria-label="Toggle" />
       </div>
     </div>
   );

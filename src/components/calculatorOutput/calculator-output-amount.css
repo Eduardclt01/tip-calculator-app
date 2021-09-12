@@ -1,0 +1,8 @@
+.calculator-output-amount{
+  display: flex;
+  justify-content: space-between;
+}
+
+.calculator-output__container--reset-button{
+  margin: auto;
+}

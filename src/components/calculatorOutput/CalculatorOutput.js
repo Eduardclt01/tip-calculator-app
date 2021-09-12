@@ -1,4 +1,6 @@
 import CalculatorOutputAmount from './CalculatorOutputAmount'
+import DefaultButton from '../button/defaultButton';
+
 import './calculator-output.css'
 
 function CalculatorOutput(props) {
@@ -10,19 +12,22 @@ function CalculatorOutput(props) {
 
   return (
     <div className="calculator-output">
+      <div className="calculator-output__amount-labels">
+        <CalculatorOutputAmount
+          amount={0}
+          label={'Tip amount'}>
+        </CalculatorOutputAmount>
+      </div>
 
-      <CalculatorOutputAmount
-        amount={0}
-        label={'Tip amount'}>
-      </CalculatorOutputAmount>
+      <div className="calculator-output__amount-labels">
+        <CalculatorOutputAmount
+          amount={0}
+          label={'Total'}>
+        </CalculatorOutputAmount>
+      </div>
 
-      <CalculatorOutputAmount
-        amount={0}
-        label={'Total'}>
-      </CalculatorOutputAmount>
-
-      <div className="calculator-output__container">
-        <button onClick={onResetInputsClick} >Reset</button>
+      <div className="calculator-output__reset-button">
+        <DefaultButton onClick={onResetInputsClick} buttonText="Reset"></DefaultButton>
       </div>
 
     </div>
