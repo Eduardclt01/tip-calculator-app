@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className="App">
-    <pre>{JSON.stringify(appContext.state, null, 2)}</pre>
+      <pre>{JSON.stringify(appContext.state, null, 2)}</pre>
 
       <Calculator>
         <CalculatorInput></CalculatorInput>
