@@ -1,33 +1,35 @@
 import React from 'react'
+import { AppContext } from '../../AppContext.js';
 
 import './calculator-input.css'
 
 function CalculatorInput() {
   // ----- Initializers -----
+  const appContext = React.useContext(AppContext);
 
   // ----- Event Listers -----
   function onBillTotalChange(event) {
-    console.log(event.target.value)
+    appContext.actions.setBillAmount(parseInt(event.target.value));
   }
 
   function onTipPercentageChange(event) {
-    console.log(event.target.value)
+    appContext.actions.setTipPercentage(parseInt(event.target.value));
   }
 
   function onNumberOfPeopleChange(event) {
-    console.log(event.target.value)
+    appContext.actions.setNumberOfPeople(parseInt(event.target.value));
   }
 
   return (
     <div className="calculator-input">
       <div className="calculator-input__input-container">
         <label className="calculator-input__input-container--label">Bill</label>
-        <input className="calculator-input__input-container--input-box" placeholder="0" type="number" onChange={onBillTotalChange} aria-label="Toggle" />
+        <input className="calculator-input__input-container--input-box" value={appContext.state.billAmount} type="number" onChange={onBillTotalChange} aria-label="Toggle" />
       </div>
 
       <div className="calculator-input__input-container">
         <label className="calculator-input__input-container--label">Tip percentage</label>
-        <div onChange={onTipPercentageChange}>
+        <div onChange={onTipPercentageChange} value={appContext.state.tipPercentage}>
           <input type="radio" value="5"  name="tipPercentage" /> 5%
           <input type="radio" value="10" name="tipPercentage" /> 10%
           <input type="radio" value="15" name="tipPercentage" /> 15%
@@ -38,7 +40,7 @@ function CalculatorInput() {
 
       <div className="calculator-input__input-container">
         <label className="calculator-input__input-container--label">Number of people</label>
-        <input className="calculator-input__input-container--input-box" placeholder="0" type="number" onChange={onNumberOfPeopleChange} aria-label="Toggle" />
+        <input className="calculator-input__input-container--input-box" value={appContext.state.numberOfPeople} type="number" onChange={onNumberOfPeopleChange} aria-label="Toggle" />
       </div>
     </div>
   );

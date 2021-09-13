@@ -13,7 +13,6 @@ export const AppContextWrapper = (props) => {
   });
 
   function setBillAmount(amount) {
-    console.log('Appcontext.js Amount: ' + amount)
     setState(function(state) {
       return {
         ...state,
@@ -66,7 +65,7 @@ export const AppContextWrapper = (props) => {
         tipPercentage: 0,
         numberOfPeople: 0,
         calculatedTipPerPersonAmount: 0,
-        calculatedTotalTipAmount: 0
+        calculatedTotalAmountPerPerson: 0
       };
     });
   }
