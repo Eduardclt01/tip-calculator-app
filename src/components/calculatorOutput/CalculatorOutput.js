@@ -12,23 +12,17 @@ function CalculatorOutput(props) {
 
   return (
     <div className="calculator-output">
-      <div className="calculator-output__amount-labels">
-        <CalculatorOutputAmount
-          amount={0}
-          label={'Tip amount'}>
-        </CalculatorOutputAmount>
-      </div>
+      <CalculatorOutputAmount
+        amount={0}
+        label={'Tip amount'}>
+      </CalculatorOutputAmount>
 
-      <div className="calculator-output__amount-labels">
-        <CalculatorOutputAmount
-          amount={0}
-          label={'Total'}>
-        </CalculatorOutputAmount>
-      </div>
+      <CalculatorOutputAmount
+        amount={0}
+        label={'Total'}>
+      </CalculatorOutputAmount>
 
-      <div className="calculator-output__reset-button">
-        <DefaultButton onClick={onResetInputsClick} buttonText="Reset"></DefaultButton>
-      </div>
+      <DefaultButton onButtonClick={onResetInputsClick} buttonText="Reset" style="SECONDARY"></DefaultButton>
 
     </div>
   );
