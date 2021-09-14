@@ -1,0 +1,12 @@
+.calculator-input{
+  flex-grow: 1;
+}
+
+.calculator-input__input-container{
+  margin-bottom: 1.5rem;
+}
+
+.calculator-input__input-container--label{
+  display: block;
+  padding-bottom: .5rem;
+}

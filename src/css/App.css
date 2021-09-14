@@ -1,0 +1,17 @@
+.calculator{
+  width: 50%;
+  margin: auto;
+}
+
+input {
+  padding: .5rem;
+  border: none;
+  border-bottom: 1px solid grey;
+}
+
+@media (max-width: 800px) {
+  .calculator {
+    width: 80%;
+  }
+}
+

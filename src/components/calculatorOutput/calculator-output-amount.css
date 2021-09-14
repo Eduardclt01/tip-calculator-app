@@ -1,0 +1,4 @@
+.calculator-output-amount{
+  display: flex;
+  justify-content: space-between;
+}
